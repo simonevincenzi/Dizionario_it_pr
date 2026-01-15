@@ -1,17 +1,55 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dizionario Italiano-Parmigiano</title>
+    <link rel="stylesheet" href="styles.css?v=20260104" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Dizionario Italiano-Parmigiano</p>
+        <h1>Archivio Digitale</h1>
+        <div class="controls">
+          <label class="search">
+            <span class="sr-only">Cerca lemma o testo</span>
+            <input id="search" type="search" placeholder="Cerca: azione, abbandonare, rùbia..." />
+          </label>
+          <div class="toggle-group" role="group" aria-label="Direzione ricerca">
+            <button id="modeForward" class="toggle active">Italiano → Parmigiano</button>
+            <button id="modeReverse" class="toggle">Parmigiano → Italiano</button>
+          </div>
+          <button id="toggleRaw" class="toggle">Mostra testo grezzo</button>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="stats">
+          <div>
+            <span class="stat-number" id="entryCount">0</span>
+            <span class="stat-label">voci</span>
+          </div>
+          <div>
+            <span class="stat-number" id="matchCount">0</span>
+            <span class="stat-label">risultati</span>
+          </div>
+        </div>
+        <p class="panel-note">
+          Suggerimento: in modalità Parmigiano → Italiano, i match esatti sono
+          in testa.
+        </p>
+      </div>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vocabolario Parmigiano</title>
-  <script type="module" crossorigin src="./assets/index-bcf7mlHs.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DalUcppY.css">
-</head>
+    <main class="content">
+      <section id="results" class="results"></section>
+      <button id="loadMore" class="load-more">Carica altri</button>
+    </main>
 
-<body>
-  <div id="root"></div>
-</body>
+    <footer class="footer">
+      <p>Dataset completo A–Z · versione locale</p>
+    </footer>
 
+    <script src="app.js?v=20260104"></script>
+  </body>
 </html>
